@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reality City - لوحة الإدارة</title>
+    <link rel="icon" href="./rc_new_1.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+    <div class="fixed inset-0 z-0">
+        <img src="./core-roleplay-grand-theft-auto-grand-theft-auto-v-roleplaying-fivem-hd-wallpaper-preview.jpg" alt="خلفية" class="w-full h-full object-cover opacity-50">
+    </div>
+
+    <header class="bg-black/50 backdrop-blur-sm fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2 space-x-reverse">
+                    <img src="./rc_new_1.png" alt="GTA5 RP Logo" class="h-10">
+                    <span class="text-2xl font-bold text-blue-400">Reality City</span>
+                </div>
+                <ul class="flex space-x-6 space-x-reverse">
+                    <li><a href="#" class="hover:text-blue-400 transition">الرئيسية</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition">الإحصائيات</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition">طلبات الشراء</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition">إدارة اللاعبين</a></li>
+                    <li><a href="#" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md transition">تسجيل الخروج</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 pt-24 pb-12 relative z-10">
+        <h1 class="text-4xl font-bold mb-8 text-center">لوحة الإدارة</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <!-- عدد اللاعبين خلال اليوم -->
+            <div class="bg-gray-800/50 rounded-lg p-4">
+                <h2 class="text-xl font-bold mb-4">عدد اللاعبين خلال اليوم</h2>
+                <canvas id="playersChart"></canvas>
+            </div>
+
+            <!-- أكثر مناطق عدد اللاعبين منها -->
+            <div class="bg-gray-800/50 rounded-lg p-4">
+                <h2 class="text-xl font-bold mb-4"> مناطق اتصال اللاعبين</h2>
+                <canvas id="regionsChart"></canvas>
+            </div>
+
+            <!-- أداء السيرفر -->
+            <div class="bg-gray-800/50 rounded-lg p-4">
+                <h2 class="text-xl font-bold mb-4">أداء السيرفر</h2>
+                <canvas id="serverPerformanceChart"></canvas>
+            </div>
+
+            <!-- عدد الرقابة خلال اليوم -->
+            <div class="bg-gray-800/50 rounded-lg p-4">
+                <h2 class="text-xl font-bold mb-4">تفاعل الرقابة خلال اليوم</h2>
+                <canvas id="moderationChart"></canvas>
+            </div>
+        </div>
+
+        <!-- قسم طلبات الشراء -->
+        <div class="bg-gray-800/50 rounded-lg p-4">
+            <h2 class="text-2xl font-bold mb-4">طلبات الشراء الأخيرة</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-gray-700">
+                            <th class="p-2 text-right">المستخدم</th>
+                            <th class="p-2 text-right">المنتج</th>
+                            <th class="p-2 text-right">السعر</th>
+                            <th class="p-2 text-right">الحالة</th>
+                            <th class="p-2 text-right">الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-700">
+                            <td class="p-2">
+                                <div class="flex items-center space-x-2 space-x-reverse">
+                                    <img src="https://cdn.discordapp.com/avatars/650617146585645066/b54148fc800f72ff566d861b690a324c.png?size=1024" alt="صورة المستخدم" class="w-8 h-8 rounded-full">
+                                    <span>Crystal</span>
+                                </div>
+                            </td>
+                            <td class="p-2">سيارة فاخرة</td>
+                            <td class="p-2">$50,000</td>
+                            <td class="p-2"><span class="bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded">قيد المراجعة</span></td>
+                            <td class="p-2">
+                                <button class="bg-green-500 hover:bg-green-600 text-white px-2 py-1 rounded mr-2">قبول</button>
+                                <button class="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded">رفض</button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="p-2">
+                                <div class="flex items-center space-x-2 space-x-reverse">
+                                    <img src="https://cdn.discordapp.com/avatars/1281579340114690105/4885f352235a6a8eaa290b0589231b07.png?size=1024" alt="صورة المستخدم" class="w-8 h-8 rounded-full">
+                                    <span>Nasser 1</span>
+                                </div>
+                            </td>
+                            <td class="p-2">منزل فاخر</td>
+                            <td class="p-2">$200,000</td>
+                            <td class="p-2"><span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">تم القبول</span></td>
+                            <td class="p-2">
+                                <button class="bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded">تفاصيل</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-2">
+                                <div class="flex items-center space-x-2 space-x-reverse">
+                                    <img src="https://cdn.discordapp.com/avatars/806107633651941408/463ec26dc74b94363b6dda68f5e541c5.png?size=1024" alt="صورة المستخدم" class="w-8 h-8 rounded-full">
+                                    <span>Adoom5877</span>
+                                </div>
+                            </td>
+                            <td class="p-2">حزمة أسلحة</td>
+                            <td class="p-2">$75,000</td>
+                            <td class="p-2"><span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">مرفوض</span></td>
+                            <td class="p-2">
+                                <button class="bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded">تفاصيل</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black/50 backdrop-blur-sm py-6 relative z-10">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Reality City . جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        // رسم البيانات للرسوم البيانية
+        const ctx1 = document.getElementById('playersChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00'],
+                datasets: [{
+                    label: 'عدد اللاعبين',
+                    data: [50, 30, 60, 120, 180, 150],
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const ctx2 = document.getElementById('regionsChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['مصر', 'السعوديه', 'الامارات', 'عمان', 'قطر'],
+                datasets: [{
+                    label: 'عدد اللاعبين',
+                    data: [300, 250, 200, 150, 100],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.5)',
+                        'rgba(54, 162, 235, 0.5)',
+                        'rgba(255, 206, 86, 0.5)',
+                        'rgba(75, 192, 192, 0.5)',
+                        'rgba(153, 102, 255, 0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const ctx3 = document.getElementById('serverPerformanceChart').getContext('2d');
+        new Chart(ctx3, {
+            type: 'line',
+            data: {
+                labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00'],
+                datasets: [{
+                    label: 'استخدام CPU',
+                    data: [30, 40, 35, 50, 49, 60],
+                    borderColor: 'rgb(255, 99, 132)',
+                    tension: 0.1
+                }, {
+                    label: 'استخدام الذاكرة',
+                    data: [50, 55, 60, 65, 70, 75],
+                    borderColor: 'rgb(54, 162, 235)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        const ctx4 = document.getElementById('moderationChart').getContext('2d');
+        new Chart(ctx4, {
+            type: 'pie',
+            data: {
+                labels: ['تحذيرات', 'حظر مؤقت', 'حظر دائم', 'إجراءات أخرى'],
+                datasets: [{
+                    data: [30, 15, 5, 10],
+                    backgroundColor: [
+                        'rgba(255, 206, 86, 0.5)',
+                        'rgba(255, 99, 132, 0.5)',
+                        'rgba(54, 162, 235, 0.5)',
+                        'rgba(75, 192, 192, 0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+</body>
+</html>

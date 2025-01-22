@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reality City Store</title>
+    <link rel="icon" href="./rc_new_1.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+    <div class="fixed inset-0 z-0">
+        <img src="./large.1134337574_FiveM-GoldenKeyStoneRP10_24_202023_08_32.png.bb37acdd547ff6937115d8d034a656df.png" alt="خلفية" class="w-full h-full object-cover opacity-50">
+    </div>
+
+    <header class="bg-black/50 backdrop-blur-sm fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2 space-x-reverse">
+                    <img src="./rc_new_1.png" alt="GTA5 RP Logo" class="h-10">
+                    <span class="text-2xl font-bold text-blue-400">Reality City </span>
+                </div>
+                <ul class="flex space-x-6 space-x-reverse">
+                    <li><a href="index.html" class="hover:text-blue-400 transition">الرئيسية</a></li>
+                    <li><a href="server.html" class="hover:text-blue-400 transition">المتجر</a></li>
+                    <li><a href="forum.html" class="hover:text-blue-400 transition">التحديثات</a></li>
+                    <li><a href="forum.html" class="hover:text-blue-400 transition">المتصدرين</a></li>
+                    <li><a href="buy.html" class="hover:text-blue-400 transition">البثوث</a></li>
+                    <li><a href="#" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md transition">ديسكورد</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 pt-24 pb-12 relative z-10">
+        <h1 class="text-4xl font-bold mb-8 text-center">متجر السيرفر</h1>
+        
+        <div class="mb-8 text-center">
+            <button id="addProductBtn" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition">
+                إضافة منتج جديد
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- منتج 1 -->
+            <div class="bg-black/55 rounded-lg overflow-hidden shadow-lg hover:scale-110 transition">
+                <img src="./debadged-car-pack-50-cars-366155.webp" alt="منتج 1" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">سيارة فاخرة</h3>
+                    <p class="text-gray-400 mb-4">سيارة رياضية فاخرة لتجربة قيادة مميزة في السيرفر.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-green-400">$50</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition">
+                            شراء الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج 2 -->
+            <div class="bg-black/55 rounded-lg overflow-hidden shadow-lg hover:scale-110 transition">
+                <img src="./large-147268.jpg" alt="منتج 2" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">منزل فاخر</h3>
+                    <p class="text-gray-400 mb-4">منزل فاخر مع إطلالة رائعة على المدينة.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-green-400">$200</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition">
+                            شراء الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- منتج 3 -->
+            <div class="bg-black/55 rounded-lg overflow-hidden shadow-lg hover:scale-110 transition">
+                <img src="./Tod1w1dT9FxxZYCDrGtN3sx7qPXnL3phhiL5Nkf9.png" alt="منتج 3" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">حزمة أسلحة</h3>
+                    <p class="text-gray-400 mb-4">حزمة متنوعة من الأسلحة لحماية نفسك في السيرفر.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-2xl font-bold text-green-400">$75</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition">
+                            شراء الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black/50 backdrop-blur-sm py-6 relative z-10">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Reality City . جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- نموذج إضافة منتج جديد -->
+    <div id="addProductModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-gray-800 p-8 rounded-lg w-full max-w-md">
+            <h2 class="text-2xl font-bold mb-4">إضافة منتج جديد</h2>
+            <form id="addProductForm" class="space-y-4">
+                <div>
+                    <label for="productName" class="block text-sm font-medium text-gray-400">اسم المنتج</label>
+                    <input type="text" id="productName" name="productName" required class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+                <div>
+                    <label for="productDescription" class="block text-sm font-medium text-gray-400">وصف المنتج</label>
+                    <textarea id="productDescription" name="productDescription" rows="3" required class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                </div>
+                <div>
+                    <label for="productPrice" class="block text-sm font-medium text-gray-400">السعر</label>
+                    <input type="number" id="productPrice" name="productPrice" required class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+                <div>
+                    <label for="productImage" class="block text-sm font-medium text-gray-400">صورة المنتج</label>
+                    <input type="file" id="productImage" name="productImage" accept="image/*" required class="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+                <div class="flex justify-end space-x-4 space-x-reverse">
+                    <button type="button" id="cancelAddProduct" class="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition">إلغاء</button>
+                    <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">إضافة المنتج</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const addProductBtn = document.getElementById('addProductBtn');
+        const addProductModal = document.getElementById('addProductModal');
+        const cancelAddProduct = document.getElementById('cancelAddProduct');
+        const addProductForm = document.getElementById('addProductForm');
+
+        addProductBtn.addEventListener('click', () => {
+            addProductModal.classList.remove('hidden');
+        });
+
+        cancelAddProduct.addEventListener('click', () => {
+            addProductModal.classList.add('hidden');
+        });
+
+        addProductForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // هنا يمكنك إضافة الكود الخاص بمعالجة إضافة المنتج
+            console.log('تمت إضافة المنتج');
+            addProductModal.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>

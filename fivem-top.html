@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reality City Top </title>
+    <link rel="icon" href="./rc_new_1.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col">
+    <div class="fixed inset-0 z-0">
+        <img src="./bg-video.jpg" alt="خلفية" class="w-full h-full object-cover opacity-50">
+    </div>
+
+    <header class="bg-black/50 backdrop-blur-sm fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2 space-x-reverse">
+                    <img src="./rc_new_1.png" alt="GTA5 RP Logo" class="h-10">
+                    <span class="text-2xl font-bold text-blue-400">Reality City</span>
+                </div>
+                <ul class="flex space-x-6 space-x-reverse">
+                    <li><a href="index.html" class="hover:text-blue-400 transition">الرئيسية</a></li>
+                    <li><a href="server.html" class="hover:text-blue-400 transition">المتجر</a></li>
+                    <li><a href="forum.html" class="hover:text-blue-400 transition">التحديثات</a></li>
+                    <li><a href="forum.html" class="hover:text-blue-400 transition">المتصدرين</a></li>
+                    <li><a href="buy.html" class="hover:text-blue-400 transition">البثوث</a></li>
+                    <li><a href="#" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md transition">ديسكورد</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 pt-24 pb-12 relative z-10">
+        <h1 class="text-4xl font-bold mb-8 text-center">أعلى 10 متصدرين في ساعات التفاعل</h1>
+        
+        <div class="max-w-3xl mx-auto space-y-2">
+            <!-- المتصدر #1 مع تاج خاص -->
+            <div class="bg-gray-800/50 hover:bg-gray-800/70 rounded-xl p-4 transition-all duration-200 cursor-pointer">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 flex items-center justify-center text-xl font-bold text-yellow-400">
+                            1
+                        </div>
+                        <div class="relative">
+                            <img src="https://cdn.discordapp.com/avatars/944023703224741938/94f7f146106026bf6097d829c68e0226.png?size=1024" alt="صورة اللاعب" class="w-12 h-12 rounded-full">
+                            <span class="absolute -top-2 -right-2">
+                                👑
+                            </span>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold">M7md3rb</span>
+                                <span class="bg-blue-500/20 text-blue-400 text-xs px-2 py-0.5 rounded-full">VIP</span>
+                            </div>
+                            <span class="text-sm text-gray-400">250 ساعة</span>
+                        </div>
+                    </div>
+                    <div class="text-xl font-bold text-blue-400">250h</div>
+                </div>
+            </div>
+
+            <!-- باقي المتصدرين -->
+            <div class="bg-gray-800/50 hover:bg-gray-800/70 rounded-xl p-4 transition-all duration-200 cursor-pointer">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 flex items-center justify-center text-xl font-bold text-gray-400">
+                            2
+                        </div>
+                        <img src="https://cdn.discordapp.com/guilds/1115381140795162656/users/602735991794696202/avatars/d2dd148ed7b18de1aa9de6e0a3858b68.png?size=1024" alt="صورة اللاعب" class="w-12 h-12 rounded-full">
+                        <div>
+                            <div class="font-bold">Levi</div>
+                            <span class="text-sm text-gray-400">245 ساعة</span>
+                        </div>
+                    </div>
+                    <div class="text-xl font-bold text-blue-400">245h</div>
+                </div>
+            </div>
+
+            <div class="bg-gray-800/50 hover:bg-gray-800/70 rounded-xl p-4 transition-all duration-200 cursor-pointer">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 flex items-center justify-center text-xl font-bold text-orange-400">
+                            3
+                        </div>
+                        <img src="https://cdn.discordapp.com/avatars/765989504212926534/d3df51c02ac30052b3dc914a8241ee3b.png?size=1024" alt="صورة اللاعب" class="w-12 h-12 rounded-full">
+                        <div>
+                            <div class="font-bold">2ruk</div>
+                            <span class="text-sm text-gray-400">240 ساعة</span>
+                        </div>
+                    </div>
+                    <div class="text-xl font-bold text-blue-400">240h</div>
+                </div>
+            </div>
+
+            <!-- باقي المتصدرين من 4 إلى 20 -->
+            <div class="space-y-2">
+                <!-- تكرار نفس البنية للمراكز من 4 إلى 20 -->
+                <!-- مثال للمركز 4 -->
+                <div class="bg-gray-800/50 hover:bg-gray-800/70 rounded-xl p-4 transition-all duration-200 cursor-pointer">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="w-8 h-8 flex items-center justify-center text-xl font-bold text-gray-500">
+                                4
+                            </div>
+                            <img src="https://cdn.discordapp.com/avatars/1116786072626679968/a_ddebc6fcc8904e4759f4ac50c8fb5ec2.gif?size=1024" alt="صورة اللاعب" class="w-12 h-12 rounded-full">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-bold">ARM</span>
+                                    <span class="bg-blue-500/20 text-blue-400 text-xs px-2 py-0.5 rounded-full">VIP</span>
+                                </div>
+                                
+                                <span class="text-sm text-gray-400">235 ساعة</span>
+                            </div>
+                        </div>
+                        <div class="text-xl font-bold text-blue-400">235h</div>
+                    </div>
+                </div>
+
+                <!-- مثال للمركز 5 -->
+                <div class="bg-gray-800/50 hover:bg-gray-800/70 rounded-xl p-4 transition-all duration-200 cursor-pointer">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="w-8 h-8 flex items-center justify-center text-xl font-bold text-gray-500">
+                                5
+                            </div>
+                            <img src="./rc_new_1.png" alt="صورة اللاعب" class="w-12 h-12 rounded-full">
+                            <div>
+                                <div class="font-bold">نورة السبيعي</div>
+                                <span class="text-sm text-gray-400">55 ساعة</span>
+                            </div>
+                        </div>
+                        <div class="text-xl font-bold text-blue-400">55h</div>
+                    </div>
+                </div>
+            </div>
+             <!-- مثال للمركز 6 -->
+             <div class="bg-gray-800/50 hover:bg-gray-800/70 rounded-xl p-4 transition-all duration-200 cursor-pointer">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 flex items-center justify-center text-xl font-bold text-gray-500">
+                            6
+                        </div>
+                        <img src="./rc_new_1.png" alt="صورة اللاعب" class="w-12 h-12 rounded-full">
+                        <div>
+                            <div class="font-bold">خالد المالكي</div>
+                            <span class="text-sm text-gray-400">39 ساعة</span>
+                        </div>
+                    </div>
+                    <div class="text-xl font-bold text-blue-400">39h</div>
+                </div>
+            </div>
+             <!-- مثال للمركز 7 -->
+             <div class="bg-gray-800/50 hover:bg-gray-800/70 rounded-xl p-4 transition-all duration-200 cursor-pointer">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 flex items-center justify-center text-xl font-bold text-gray-500">
+                            7
+                        </div>
+                        <img src="./rc_new_1.png" alt="صورة اللاعب" class="w-12 h-12 rounded-full">
+                        <div>
+                            <div class="font-bold">سارة الغامدي</div>
+                            <span class="text-sm text-gray-400">36 ساعة</span>
+                        </div>
+                    </div>
+                    <div class="text-xl font-bold text-blue-400">36h</div>
+                </div>
+            </div>
+             <!-- مثال للمركز 8 -->
+             <div class="bg-gray-800/50 hover:bg-gray-800/70 rounded-xl p-4 transition-all duration-200 cursor-pointer">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 flex items-center justify-center text-xl font-bold text-gray-500">
+                            8
+                        </div>
+                        <img src="./rc_new_1.png" alt="صورة اللاعب" class="w-12 h-12 rounded-full">
+                        <div>
+                            <div class="font-bold">عمر الحربي</div>
+                            <span class="text-sm text-gray-400">34 ساعة</span>
+                        </div>
+                    </div>
+                    <div class="text-xl font-bold text-blue-400">34h</div>
+                </div>
+            </div>
+             <!-- مثال للمركز 9 -->
+             <div class="bg-gray-800/50 hover:bg-gray-800/70 rounded-xl p-4 transition-all duration-200 cursor-pointer">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 flex items-center justify-center text-xl font-bold text-gray-500">
+                            9
+                        </div>
+                        <img src="./rc_new_1.png" alt="صورة اللاعب" class="w-12 h-12 rounded-full">
+                        <div>
+                            <div class="font-bold">لينا الزهراني</div>
+                            <span class="text-sm text-gray-400">30 ساعة</span>
+                        </div>
+                    </div>
+                    <div class="text-xl font-bold text-blue-400">30h</div>
+                </div>
+            </div>
+             <!-- مثال للمركز 10 -->
+             <div class="bg-gray-800/50 hover:bg-gray-800/70 rounded-xl p-4 transition-all duration-200 cursor-pointer">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <div class="w-8 h-8 flex items-center justify-center text-xl font-bold text-gray-500">
+                            10
+                        </div>
+                        <img src="./rc_new_1.png" alt="صورة اللاعب" class="w-12 h-12 rounded-full">
+                        <div>
+                            <div class="font-bold">نورة السبيعي</div>
+                            <span class="text-sm text-gray-400">23 ساعة</span>
+                        </div>
+                    </div>
+                    <div class="text-xl font-bold text-blue-400">23h</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black/50 backdrop-blur-sm py-6 relative z-10">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Reality City . جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+</body>
+</html>
